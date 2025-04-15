@@ -1,5 +1,6 @@
 import React from "react";
 import pict from '../assets/pictHome1.png';
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -7,8 +8,8 @@ function Home() {
             <header className="flex justify-between items-center px-12 py-6 shadow-md">
                 <h1 className="logo-title">NUTUR</h1>
                 <div className="flex items-center space-x-[5px] auth-container">
-                    <button className="auth-button">masuk</button>
-                    <button className="auth-button">daftar</button>
+                    <Link to="/masuk"><button className="auth-button">masuk</button></Link>
+                    <Link to="/daftar"><button className="auth-button">daftar</button></Link>
                 </div>
             </header>
 
