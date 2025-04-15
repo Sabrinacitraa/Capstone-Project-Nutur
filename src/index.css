@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo-title {
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 12rem;
+}
+
+.auth-button {
+  background-color: #CDFF05;
+  width: 145px;
+  height: 45px;
+  border-radius: 12px;
+  font-family: 'Amaranth';
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.auth-container {
+  margin-right: 10rem;
+}
+
+.auth-button:hover {
+  background-color: #bde600;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-right: 8rem;
+}
+
+.hero-button {
+  background-color: #facc15;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  margin-right: 8rem;
+}
+
+.hero-button:hover {
+  background-color: #fbbf24;
+}
