@@ -11,6 +11,7 @@ import img from "../../assets/img1.png";
 import img2 from "../../assets/progress.png";
 import img3 from "../../assets/fav.png";
 import img4 from "../../assets/mountain.png";
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => (
   <aside className="w-60 min-h-screen bg-white border-r flex flex-col justify-between font-poppins">
@@ -175,43 +176,46 @@ const Dashboard = () => {
               <h2 className="text-md font-semibold mb-2">
                 Terakhir dipelajari
               </h2>
-              <div
-                className="border border-gray-300 rounded-md flex items-center gap-4 p-20 "
-                style={{
-                  padding: "1rem 1rem",
-                  justifyContent: "center",
-                  borderRadius: "1rem",
-                  border: "1px solid #333",
-                }}
-              >
-                <img
-                  src={img}
-                  className="rounded-md w-28 h-16 object-cover"
-                  alt="Bahasa Jawa"
-                />
-                <div className="flex-1" style={{ marginLeft: "2rem" }}>
-                  <p
-                    className="font-bold"
-                    style={{ fontWeight: "bold", fontSize: "1.5rem" }}
+              <Link to="/quizStage">
+                <div
+                  className="border border-gray-300 rounded-md flex items-center gap-4 p-20 "
+                  style={{
+                    padding: "1rem 1rem",
+                    justifyContent: "center",
+                    borderRadius: "1rem",
+                    border: "1px solid #333",
+                  }}
+                >
+                  <img
+                    src={img}
+                    className="rounded-md w-28 h-16 object-cover"
+                    alt="Bahasa Jawa"
+                  />
+                  <div className="flex-1" style={{ marginLeft: "2rem" }}>
+                    <p
+                      className="font-bold"
+                      style={{ fontWeight: "bold", fontSize: "1.5rem" }}
+                    >
+                      Bahasa Jawa
+                    </p>
+                    <div className="w-full bg-yellow-100 rounded-full h-3 mt-1">
+                      <img src={img2} alt="" />
+                    </div>
+                  </div>
+                  <div
+                    className="flex flex-col items-start gap-2"
+                    style={{ marginRight: "3rem", gap: "1rem" }}
                   >
-                    Bahasa Jawa
-                  </p>
-                  <div className="w-full bg-yellow-100 rounded-full h-3 mt-1">
-                    <img src={img2} alt="" />
+                    <button className="text-red-400 text-xl bg-transparent border-none outline-none hover:underline">
+                      <img src={img3} alt="" />
+                    </button>
+                    <button className="text-yellow-600 font-medium bg-transparent border-none outline-none hover:underline">
+                      Lanjutkan
+                    </button>
                   </div>
                 </div>
-                <div
-                  className="flex flex-col items-start gap-2"
-                  style={{ marginRight: "3rem", gap: "1rem" }}
-                >
-                  <button className="text-red-400 text-xl bg-transparent border-none outline-none hover:underline">
-                    <img src={img3} alt="" />
-                  </button>
-                  <button className="text-yellow-600 font-medium bg-transparent border-none outline-none hover:underline">
-                    Lanjutkan
-                  </button>
-                </div>
-              </div>
+              </Link>
+
             </section>
 
             <section className="mb-6" style={{ margin: "3rem" }}>
