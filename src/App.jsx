@@ -5,6 +5,7 @@ import Masuk from "./pages/masuk";
 import Daftar from "./pages/daftar";
 import Dashboard from "./pages/dashboard/dashboard";
 import QuizStage from "./pages/quiz/quizStage";
+import Language from "./pages/dashboard/language";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/daftar" element={<Daftar />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/quizStage" element={<QuizStage />} />
+          <Route path="/language" element={<Language />} />
         </Routes>
       </div>
     </>

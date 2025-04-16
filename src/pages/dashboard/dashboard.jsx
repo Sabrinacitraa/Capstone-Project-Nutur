@@ -14,7 +14,7 @@ import img4 from "../../assets/mountain.png";
 import { Link, useNavigate } from 'react-router-dom';
 
 
-const Sidebar = () => {
+export const Sidebar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -86,7 +86,7 @@ const Sidebar = () => {
 };
 
 
-const Navbar = () => (
+export const Navbar = () => (
   <nav
     className=" flex justify-end text-md font-semibold text-gray-700 "
     style={{
