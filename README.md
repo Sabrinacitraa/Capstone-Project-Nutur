@@ -23,7 +23,7 @@ Meningkatkan minat generasi muda terhadap pelestarian bahasa daerah Indonesia de
 
 ```bash
 # Clone repositori
-git clone https://github.com/username/nutur.git
+git clone https://github.com/username/nutur.git](https://github.com/Sabrinacitraa/Capstone-Project-Nutur.git
 cd nutur
 
 # Instalasi dependency untuk frontend
