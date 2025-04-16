@@ -1,12 +1,45 @@
-# React + Vite
+# Capstone Project Nutur
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Nutur** adalah platform pembelajaran bahasa daerah berbasis web yang ditujukan untuk pelajar SMP dan SMA. Platform ini dirancang untuk membantu pelajar mengenal dan memahami bahasa daerah secara interaktif melalui teknologi modern seperti gamifikasi, machine learning, dan antarmuka yang ramah pengguna.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Tujuan Proyek
 
-## Expanding the ESLint configuration
+Meningkatkan minat generasi muda terhadap pelestarian bahasa daerah Indonesia dengan menyediakan platform edukatif berbasis teknologi yang mudah diakses dan menyenangkan.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Fitur Utama
+
+- **Pembelajaran Bahasa Daerah** melalui kuis, latihan, dan materi interaktif.
+- **Gamifikasi**: Sistem poin dan pencapaian yang memotivasi belajar.
+- **Sentiment Analysis**: Menganalisis feedback pengguna untuk pengembangan platform.
+- **Integrasi Machine Learning**: Untuk pengenalan kosa kata dan respons interaktif.
+
+---
+
+## ⚙️ Langkah Instalasi Lokal
+
+```bash
+# Clone repositori
+git clone https://github.com/username/nutur.git
+cd nutur
+
+# Instalasi dependency untuk frontend
+cd fe
+npm install
+npm run dev
+
+# Instalasi dependency untuk backend
+cd ../be
+npm install
+npm start
+
+# Menjalankan model Machine Learning
+cd ../ml-model
+python3 model.py
+
+
+
+
