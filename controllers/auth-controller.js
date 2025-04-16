@@ -2,6 +2,7 @@ const md5 = require(`md5`)
 const jwt = require(`jsonwebtoken`)
 const userModel = require(`../models/index`).user
 const secret = `mokleters`
+const Joi = require(`joi`)
 
 const authenticateToken = async (request, response) => {
     try {
@@ -63,35 +64,65 @@ const verifyToken = (req, res, next) => {
 
 
 
-exports.register = async (req, res) => {
+const register = async (req, res) => {
     const schema = Joi.object({
-        Username: Joi.string().required(),
-        Email: Joi.string().email().required(),
-        Password: Joi.string().min(6).required(),
+        Username: Joi.string().required().messages({
+            'string.empty': 'Username is required.',
+            'any.required': 'Username is required.',
+        }),
+        Email: Joi.string().email().required().messages({
+            'string.empty': 'Email is required.',
+            'string.email': 'Email must be a valid email address.',
+            'any.required': 'Email is required.',
+        }),
+        Password: Joi.string().min(8).required().messages({
+            'string.empty': 'Password is required.',
+            'string.min': 'Password must be at least 8 characters long.',
+            'any.required': 'Password is required.',
+        }),
     });
 
-    const { error } = schema.validate(req.body);
-    if (error) {
-        return res.status(400).json({ success: false, message: error.details[0].message });
+    const { error: validationError } = schema.validate(req.body);
+    if (validationError) {
+        const errorMessages = validationError.details.map(err => err.message);
+        return res.status(400).json({
+            success: false,
+            message: errorMessages.join(', '),
+        });
     }
 
-    const { Username, Email, Password } = req.body;
+    let newUser = {
+        Username: req.body.Username,
+        Email: req.body.Email,
+        Password: md5(req.body.Password),
+        Role: req.body.Role
+    }
 
     try {
-        const existingUser = await userModel.findOne({ where: { Email } });
-        if (existingUser) {
-            return res.status(400).json({ success: false, message: "Email already registered" });
+        let checkEmail = await userModel.findAll({
+            where: { Email: newUser.Email },
+        });
+        if (checkEmail.length > 0) {
+            return res.status(400).json({
+                success: false,
+                message: "Email already registered",
+            });
         }
 
-        const hashedPassword = bcrypt.hashSync(Password, 10);
-
-        const newUser = await userModel.create({ Username, Email, Password: hashedPassword });
-
-        return res.status(201).json({
-            success: true,
-            message: "User registered successfully",
-            data: newUser,
-        });
+        userModel.create(newUser)
+            .then(result => {
+                return res.status(200).json({
+                    success: true,
+                    data: newUser,
+                    message: `User with username ${newUser.Username} has been inserted`
+                })
+            })
+            .catch(error => {
+                return res.status(404).json({
+                    success: false,
+                    message: error.message
+                })
+            })
     } catch (error) {
         return res.status(500).json({ success: false, message: error.message });
     }
@@ -121,4 +152,4 @@ const authorize = (request, response, next) => {
         })
     }
 }
-module.exports = { authenticateToken, verifyToken, authorize }
+module.exports = { authenticateToken, verifyToken, authorize, register }

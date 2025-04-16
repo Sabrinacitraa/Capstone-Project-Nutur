@@ -1,6 +1,7 @@
 const express = require(`express`)
+const cors = require('cors');
 const app = express()
-
+app.use(cors());
 //auth
 const authRoute = require(`./routes/auth-route`)
 app.use(`/login`, authRoute)
