@@ -18,7 +18,7 @@ const QuizStage = () => {
     <div
       style={{
         position: "relative",
-        width: "1440px",
+        width: "100%",
         height: "1024px",
         background: "rgba(216, 239, 122, 0.89)",
       }}
