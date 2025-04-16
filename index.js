@@ -2,6 +2,8 @@ const express = require(`express`)
 const cors = require('cors');
 const app = express()
 app.use(cors());
+
+
 //auth
 const authRoute = require(`./routes/auth-route`)
 app.use(`/login`, authRoute)
@@ -35,7 +37,7 @@ const testiRoute = require(`./routes/testi-route`)
 app.use(`/testi`, testiRoute)
 
 //port
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 app.listen(PORT, () => {
     console.log(`Server of Nutur run on port ${PORT}`)
 })
