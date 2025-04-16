@@ -3,18 +3,25 @@
 @tailwind utilities;
 
 .logo-title {
-  font-family: 'Caesar Dressing', cursive;
+  font-family: "Caesar Dressing", cursive;
   font-size: 3rem;
   font-weight: bold;
   margin-left: 12rem;
 }
 
+.logo-title-dashboard {
+  font-family: "Caesar Dressing", cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
 .auth-button {
-  background-color: #CDFF05;
+  background-color: #cdff05;
   width: 145px;
   height: 45px;
   border-radius: 12px;
-  font-family: 'Amaranth';
+  font-family: "Amaranth";
   font-weight: bold;
   font-size: 16px;
   transition: background-color 0.2s ease;

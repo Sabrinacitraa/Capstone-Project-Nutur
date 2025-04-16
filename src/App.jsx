@@ -1,9 +1,10 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 // import Navbar from './components/navbar'
-import Home from './pages/home'
-import Masuk from './pages/masuk'
-import Daftar from './pages/daftar'
+import Home from "./pages/home";
+import Masuk from "./pages/masuk";
+import Daftar from "./pages/daftar";
+import Dashboard from "./pages/dashboard/dashboard";
 
 function App() {
   return (
@@ -13,10 +14,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/masuk" element={<Masuk />} />
           <Route path="/daftar" element={<Daftar />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
