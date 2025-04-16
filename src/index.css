@@ -86,6 +86,41 @@
   color: #000000;
 }
 
+.center-call-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  font-family: 'Amaranth', sans-serif;
+}
+
+
+.center-call-pre {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #000000;
+  text-align: center;
+}
+
+.center-call-subpre {
+  font-size: 1.5rem;
+  font-weight: medium;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  max-width: 600px;
+  word-wrap: break-word;
+  color: #000000;
+  text-align: center;
+}
+
+
+
 .center-call-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -125,6 +160,32 @@
   background-color: #6a8602;
 }
 
+.language-dropdown-button {
+  width: 250px;
+  background-color: #FFB505;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Amaranth', sans-serif;
+  color: #8C6D22;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-dropdown-options {
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  opacity: 0.5; /* Ini hanya untuk isi dropdown */
+  font-family: 'Amaranth', sans-serif;
+  color: #8C6D22;
+  z-index: 10;
+  position: absolute;
+  width: 250px;
+}
 
 /* PAGE MASUK */
 
@@ -261,4 +322,53 @@
 .link-clean:hover {
   opacity: 0.8;
   transition: 0.3s;
+}
+
+/*Loading*/
+.loading-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* putih bersih */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loading-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827; /* abu gelap */
+  font-family: sans-serif;
+}
+
+.loading-bar {
+  width: 500px;
+  height: 40px;
+  background-color: #e5e7eb; /* abu terang */
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loading-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #FFB505; /* kuning */
+  border-radius: 999px 0 0 999px;
+  animation: flow 3s ease-in-out forwards;
+}
+
+@keyframes flow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }

@@ -23,7 +23,7 @@ function Masuk() {
       if (response.data.success) {
         console.log("Login berhasil:", response.data);
         localStorage.setItem("token", response.data.token);
-        navigate("/dashboard");
+        navigate("/loading");
       } else {
         setError(response.data.message || "Invalid Email or Password");
       }

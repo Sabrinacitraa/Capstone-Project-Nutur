@@ -5,6 +5,8 @@ import Masuk from "./pages/masuk";
 import Daftar from "./pages/daftar";
 import Dashboard from "./pages/dashboard/dashboard";
 import QuizStage from "./pages/quiz/quizStage";
+import Loading from "./pages/loading/login-load";
+import LearningPage from "./pages/dashboard/pre-dashboard";
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/masuk" element={<Masuk />} />
           <Route path="/daftar" element={<Daftar />} />
+          <Route path="/learning" element={<LearningPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/quizStage" element={<QuizStage />} />
+          <Route path="/loading" element={<Loading />} />
         </Routes>
       </div>
     </>

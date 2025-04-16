@@ -176,7 +176,7 @@ const Dashboard = () => {
                     className="rounded-md w-28 h-16 object-cover"
                     alt="Bahasa Jawa"
                   />
-                  <div className="flex-1" style={{ marginLeft: "2rem" }}>
+                  <div className="flex-1 link-clean" style={{ marginLeft: "2rem" }}>
                     <p
                       className="font-bold"
                       style={{ fontWeight: "bold", fontSize: "1.5rem" }}
