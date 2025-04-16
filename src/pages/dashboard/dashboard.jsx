@@ -11,95 +11,80 @@ import img from "../../assets/img1.png";
 import img2 from "../../assets/progress.png";
 import img3 from "../../assets/fav.png";
 import img4 from "../../assets/mountain.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Sidebar = () => (
-  <aside className="w-60 min-h-screen bg-white border-r flex flex-col justify-between font-poppins">
-    <div>
-      <h1 className="logo-title-dashboard">NUTUR</h1>
-      <div style={{ marginTop: "3rem" }}>
-        <div
-          className="flex items-center gap-4 px-6 mb-6"
-          style={{ gap: "1rem" }}
-        >
-          <FaUserCircle
-            className="text-5xl text-gray-700"
-            style={{ width: "4rem", height: "4rem" }}
-          />
 
-          <div>
-            <p className="text-lg font-bold text-black">User Name</p>
-            <p className="text-sm text-gray-500">Lorem Ipsum</p>
+const Sidebar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    const confirm = window.confirm("Yakin ingin logout?");
+    if (confirm) {
+      localStorage.clear();
+      navigate("/");
+    }
+  };
+
+  return (
+    <aside className="w-60 min-h-screen bg-white border-r flex flex-col justify-between font-poppins">
+      <div>
+        <h1 className="logo-title-dashboard">NUTUR</h1>
+        <div style={{ marginTop: "3rem" }}>
+          <div className="flex items-center gap-4 px-6 mb-6" style={{ gap: "1rem" }}>
+            <FaUserCircle className="text-5xl text-gray-700" style={{ width: "4rem", height: "4rem" }} />
+            <div>
+              <p className="text-lg font-bold text-black">User Name</p>
+              <p className="text-sm text-gray-500">Lorem Ipsum</p>
+            </div>
           </div>
-        </div>
 
-        <hr className="border-gray-300 mb-6 mx-6" />
+          <hr className="border-gray-300 mb-6 mx-6" />
 
-        <div
-          className="flex flex-col gap-8 px-6 text-xl font-bold text-gray-800"
-          style={{
-            lineHeight: "5.5rem",
-            justifyContent: "center",
-
-            padding: "4rem 2rem",
-            fontSize: "1.8rem",
-          }}
-        >
-          <div
-            className="flex items-center gap-4 cursor-pointer hover:text-yellow-600"
-            style={{ gap: "2rem" }}
-          >
-            <FaHeart className="text-2xl" />
-            <a href="#" style={{ textDecoration: "none", color: "#333" }}>
-              Favorite
-            </a>
-          </div>
-          <div
-            className="flex items-center gap-4 cursor-pointer hover:text-yellow-600"
-            style={{ gap: "2rem" }}
-          >
-            <FaStar className="text-2xl" />
-            <a href="#" style={{ textDecoration: "none", color: "#333" }}>
-              Point
-            </a>
-          </div>
-          <div
-            className="flex items-center gap-4 cursor-pointer hover:text-yellow-600"
-            style={{ gap: "2rem" }}
-          >
-            <FaPalette className="text-2xl" />
-            <a href="#" style={{ textDecoration: "none", color: "#333" }}>
-              Completed
-            </a>
-          </div>
-          <div
-            className="flex items-center gap-4 cursor-pointer hover:text-yellow-600"
-            style={{ gap: "2rem" }}
-          >
-            <FaUsers className="text-2xl" />
-            <a href="#" style={{ textDecoration: "none", color: "#333" }}>
-              Community
-            </a>
+          <div className="flex flex-col gap-8 px-6 text-xl font-bold text-gray-800"
+            style={{
+              lineHeight: "5.5rem",
+              justifyContent: "center",
+              padding: "4rem 2rem",
+              fontSize: "1.8rem",
+            }}>
+            {/* Link-link */}
+            <div className="flex items-center gap-4 cursor-pointer hover:text-yellow-600" style={{ gap: "2rem" }}>
+              <FaHeart className="text-2xl" />
+              <a href="#" style={{ textDecoration: "none", color: "#333" }}>Favorite</a>
+            </div>
+            <div className="flex items-center gap-4 cursor-pointer hover:text-yellow-600" style={{ gap: "2rem" }}>
+              <FaStar className="text-2xl" />
+              <a href="#" style={{ textDecoration: "none", color: "#333" }}>Point</a>
+            </div>
+            <div className="flex items-center gap-4 cursor-pointer hover:text-yellow-600" style={{ gap: "2rem" }}>
+              <FaPalette className="text-2xl" />
+              <a href="#" style={{ textDecoration: "none", color: "#333" }}>Completed</a>
+            </div>
+            <div className="flex items-center gap-4 cursor-pointer hover:text-yellow-600" style={{ gap: "2rem" }}>
+              <FaUsers className="text-2xl" />
+              <a href="#" style={{ textDecoration: "none", color: "#333" }}>Community</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div
-      className="bg-[#FFECB3] py-3 px-6 flex justify-between items-center"
-      style={{ padding: "1rem 1rem" }}
-    >
-      <button
-        className="text-red-600 font-bold text-sm bg-transparent border-none outline-none hover:underline"
-        style={{ fontSize: "1rem", color: "#B50000", fontWeight: "bold" }}
-      >
-        Logout
-      </button>
+      {/* Logout Button */}
+      <div className="bg-[#FFECB3] py-3 px-6 flex justify-between items-center"
+        style={{ padding: "1rem 1rem" }}>
+        <button
+          onClick={handleLogout}
+          className="text-red-600 font-bold text-sm bg-transparent border-none outline-none hover:underline"
+          style={{ fontSize: "1rem", color: "#B50000", fontWeight: "bold" }}
+        >
+          Logout
+        </button>
 
-      <FiLogOut className="text-xl text-gray-700" />
-    </div>
-  </aside>
-);
+        <FiLogOut className="text-xl text-gray-700" />
+      </div>
+    </aside>
+  );
+};
+
 
 const Navbar = () => (
   <nav
