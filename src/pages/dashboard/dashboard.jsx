@@ -14,7 +14,7 @@ import img4 from "../../assets/mountain.png";
 import { Link, useNavigate } from 'react-router-dom';
 
 
-const Sidebar = () => {
+export const Sidebar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -86,7 +86,7 @@ const Sidebar = () => {
 };
 
 
-const Navbar = () => (
+export const Navbar = () => (
   <nav
     className=" flex justify-end text-md font-semibold text-gray-700 "
     style={{
@@ -96,14 +96,14 @@ const Navbar = () => (
     }}
   >
     <a
-      href="#"
+      href="/dashboard"
       className="py-4 no-underline"
       style={{ color: "#333333", fontWeight: "bold" }}
     >
       Home
     </a>
     <a
-      href="#"
+      href="/language"
       className="py-2  no-underline "
       style={{ color: "#333333", fontWeight: "bold" }}
     >
@@ -246,6 +246,9 @@ const Dashboard = () => {
             </section>
 
             <section className="px-6 my-12" style={{ margin: "3rem" }}>
+              <Link to="/quizStage/stage1number2">
+
+              </Link>
               <h2 className="text-lg font-semibold  mb-4">
                 Rekomendasi untuk anda
               </h2>
@@ -257,27 +260,32 @@ const Dashboard = () => {
                 {Array(5)
                   .fill(null)
                   .map((_, idx) => (
-                    <div
+                    <Link
+                      to="/language"
                       key={idx}
-                      className="bg-lime-100 rounded-xl p-4 w-60 flex-shrink-0"
-                      style={{
-                        backgroundColor: "#D8EF7A",
-                        padding: "0.5rem 1rem",
-                        borderRadius: "1rem",
-                      }}
+                      style={{ textDecoration: "none", color: "inherit" }}
                     >
-                      <img
-                        src={img4}
-                        className="rounded-md mb-3 h-32 w-full object-cover"
-                        alt="Bahasa Jawa"
-                      />
-                      <p className="font-bold text-base text-center mb-1">
-                        Bahasa Jawa
-                      </p>
-                      <p className="text-xs italic text-gray-600 text-center">
-                        120 pengguna
-                      </p>
-                    </div>
+                      <div
+                        className="bg-lime-100 rounded-xl p-4 w-60 flex-shrink-0"
+                        style={{
+                          backgroundColor: "#D8EF7A",
+                          padding: "0.5rem 1rem",
+                          borderRadius: "1rem",
+                        }}
+                      >
+                        <img
+                          src={img4}
+                          className="rounded-md mb-3 h-32 w-full object-cover"
+                          alt="Bahasa Jawa"
+                        />
+                        <p className="font-bold text-base text-center mb-1">
+                          Bahasa Jawa
+                        </p>
+                        <p className="text-xs italic text-gray-600 text-center">
+                          {120 + idx * 10} pengguna
+                        </p>
+                      </div>
+                    </Link>
                   ))}
               </div>
             </section>

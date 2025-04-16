@@ -6,7 +6,7 @@ import pict4 from '../assets/pictHome4.png';
 import vector from '../assets/Vector1.png';
 import footer from '../assets/Footer.png';
 import kurva from '../assets/kurva1.png';
-import kurva2 from '../assets/kurva2.png';
+import kurva2 from '../assets/kurva2 - Copy.png';
 import { Link } from 'react-router-dom';
 
 function Home() {
