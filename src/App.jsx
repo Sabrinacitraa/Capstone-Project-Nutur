@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-// import Navbar from './components/navbar'
 import Home from "./pages/home";
 import Masuk from "./pages/masuk";
 import Daftar from "./pages/daftar";

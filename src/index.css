@@ -4,9 +4,16 @@
 
 .logo-title {
   font-family: "Caesar Dressing", cursive;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-left: 12rem;
+  margin-left: 8rem;
+}
+
+.logo-title-margin {
+  font-family: "Caesar Dressing", cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 4rem;
 }
 
 .logo-title-dashboard {
@@ -116,4 +123,142 @@
 
 .start-button:hover {
   background-color: #6a8602;
+}
+
+
+/* PAGE MASUK */
+
+.masuk-center {
+  justify-content: center;
+  gap: 4rem;
+}
+
+.masuk-container > div {
+  flex: 1;
+  max-width: 500px;
+}
+
+.masuk-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px); /* Kurangi tinggi header */
+  gap: 4rem;
+  margin: 0 auto;
+  max-width: 1000px; /* ❗️Batasin lebar */
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.masuk-image {
+  max-width: 100%;
+  height: auto;
+  z-index: 10;
+  position: relative;
+}
+
+.masuk-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+.masuk-form h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.masuk-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+  font-size: 1rem;
+}
+
+.masuk-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #d4ff4d;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0px 4px 0px #9fbf2d;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.masuk-button:hover {
+  background-color: #c4f03e;
+  box-shadow: 0px 2px 0px #8aa626;
+}
+
+.masuk-form p {
+  font-size: 0.9rem;
+}
+
+.masuk-form a {
+  color: #8bc34a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.masuk-form a:hover {
+  text-decoration: underline;
+}
+
+.masuk-divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+  color: #999;
+}
+
+.masuk-divider::before,
+.masuk-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+  margin: 0 0.5rem;
+}
+
+.google-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-button:hover {
+  background-color: #f5f5f5;
+}
+
+.google-button svg {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.link-clean {
+  color: black;
+  text-decoration: none;
+}
+
+.link-clean:hover {
+  opacity: 0.8;
+  transition: 0.3s;
 }
