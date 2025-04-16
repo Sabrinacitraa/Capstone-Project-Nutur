@@ -128,9 +128,11 @@ function Home() {
                         <p className="center-call-subtitle">
                             Ayo mulai Nutur pertamamu sekarang!
                         </p>
-                        <button className="start-button">
-                            Mulai
-                        </button>
+                        <Link to="/masuk">
+                            <button className="start-button">
+                                Mulai
+                            </button>
+                        </Link>
                     </div>
                     <img src={footer} alt="Footer" className="w-full" />
                 </footer>
