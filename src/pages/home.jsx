@@ -41,7 +41,7 @@ function Home() {
                     <img
                         src={vector}
                         alt="Vector"
-                        className="absolute top-[calc(52%-1000px)] left-0 w-full h-auto z-0 opacity-100 pointer-events-none object-cover"
+                        className="absolute top-[calc(52%-1075px)] left-0 w-full h-auto z-0 opacity-100 pointer-events-none object-cover"
                     />
 
                     <div className="w-1/2 flex flex-col justify-center items-center text-center">
