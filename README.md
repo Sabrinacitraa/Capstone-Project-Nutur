@@ -37,16 +37,13 @@ npm install
 npm start
 
 # Menjalankan Backend
-
-git clone -b be https://github.com/Sabrinacitraa/Capstone-Project-Nutur.git 
-
 1. Download Xampp for Windows v(bebas) di chrome.
 2. Install Xampp, Run
 3. Nyalakan Apache dan MySQL
 4. Jika berhasil klik admin sejajar dengan MySQL
 5. Tambah database baru dengan nama "nutur" (Jangan close xampp)
 6. Buat Folder di file explorer, klik box tengah di sebelah kiri Search. Ketik CMD
-7. Clone link GitHub "git clone (link)"
+7. Clone link GitHub "git clone -b be https://github.com/Sabrinacitraa/Capstone-Project-Nutur.git"
 8. Buka di VS Code.
 9. Buka terminal di VS Code.
 10. Ketik npm i.
